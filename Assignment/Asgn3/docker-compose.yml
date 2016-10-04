@@ -1,0 +1,12 @@
+version: '2'
+services:
+    jhipster:
+      image: neil3305/jhipster-project
+      ports:
+        - "8080:8080"
+    grading_helper:
+      image: grading_helper
+      stdin_open: true
+      tty: true
+      depends_on:
+        - jhipster
